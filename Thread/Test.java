@@ -1,20 +1,20 @@
-package Methods;
+package threadprioritiesdemo;
 
 public class Test extends Thread {
+
     public void run() {
-        System.out.println("thread task : " + Thread.currentThread().getName());
+        System.out.println("child thread");
+        System.out.println("child thread priority : " + Thread.currentThread().getPriority());
     }
 
     public static void main(String[] args) {
 
-        System.out.println("hello : " + Thread.currentThread().getName());
+        System.out.println("main thread old priority : " + Thread.currentThread().getPriority());
+        Thread.currentThread().getPriority();
+        System.out.println("main thread new priority : " + Thread.currentThread().getPriority());
 
-        Test t1 = new Test();
-        t1.setName("Deepak");
-        t1.start();
-
-        Test t2 = new Test();
-        t2.setName("smart programming");
-        t2.start();
+        Test t = new Test();
+        t.setPriority(3);
+        t.start();
     }
 }
