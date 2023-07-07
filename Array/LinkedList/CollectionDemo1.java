@@ -1,0 +1,25 @@
+package LinkedList;
+
+import java.util.LinkedList;
+
+public class CollectionDemo1 {
+
+    public static void main(String[] args) {
+
+        LinkedList l1 = new LinkedList();
+
+        l1.add("deepak");
+        l1.add("rahul");
+        l1.add(200);
+        l1.add(400);
+        l1.add('b');
+
+        System.out.println(l1);
+
+        l1.addFirst("sss");
+
+        System.out.println(l1);
+
+    }
+
+}
